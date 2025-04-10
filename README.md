@@ -1,3 +1,49 @@
+# Enhanced Music Player
+
+A modern, feature-rich music player built with HTML, CSS, and vanilla JavaScript.
+
+## Features
+
+- Play, pause, previous, and next track controls
+- Progress bar with seek functionality
+- Display of current and total track time
+- Autoplay next track when current track ends
+- Repeat single track functionality
+- Shuffle playlist functionality
+- Volume control with mute option
+- Visual playlist with clickable tracks
+- Rotating album cover animation during playback
+- Responsive design for all screen sizes
+
+## Usage
+
+1. Clone this repository
+2. Add your music files to the `music` folder (MP3 format)
+3. Add corresponding album artwork to the `images` folder (JPG format)
+4. Update the `songs` array in `script.js` with your song filenames (without the extension)
+5. Open `index.html` in your browser or run `npm start` to start the local server
+
+## Song Format
+
+The player automatically formats song titles for display:
+- Underscores (_) are converted to spaces
+- Hyphens (-) are converted to " - " 
+- First letter of each word is capitalized
+
+Example: `leeona_-_do_i.mp3` will display as "Leeona - Do I"
+
+## Adding New Songs
+
+1. Add your MP3 file to the `music` folder
+2. Add a corresponding JPG image with the same filename to the `images` folder
+3. Add the base filename (without extension) to the `songs` array in `script.js`
+
+## Technologies Used
+
+- HTML5 Audio API
+- CSS3 Animations and Transitions
+- ES6 JavaScript Features
+
 # Run the project
 
 - `npm i`

@@ -1,41 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/assets/music_note.ico">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Music Player</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Music Player</h1>
-    <div class="music-container" id="music-container">
-    <!-- <div class="music-container play" id="music-container"> -->
-        <div class="music-info">
-            <h4 id="title"></h4>
-            <div class="progress-container" id="progress-container">
-                <div class="progress" id="progress"></div>
-            </div>
-        </div>
 
-        <audio src="music/dropit.mp3" id="audio"></audio>
-        <div class="img-container">
-            <img alt="music-cover" src="images/dropit.jpg" id="cover">
+    <div class="music-container" id="music-container">
+      <div class="music-info">
+        <h4 id="title"></h4>
+        <div class="progress-container" id="progress-container">
+          <div class="progress" id="progress"></div>
         </div>
-        <div class="navigation">
-            <button id="prev" class="action-btn">
-                <i class="fas fa-backward"></i>
-            </button>
-            <button id="play" class="action-btn action-btn-big">
-                <i class="fas fa-play"></i>
-            </button>
-            <button id="next" class="action-btn">
-                <i class="fas fa-forward"></i>
-            </button>
+        <div class="time-display">
+          <span id="currTime">00:00</span>
+          <span>/</span>
+          <span id="durTime">00:00</span>
         </div>
+      </div>
+
+      <audio src="music/alone.mp3" id="audio"></audio>
+
+      <div class="img-container">
+        <img src="images/alone.jpg" alt="music-cover" id="cover" />
+      </div>
+      <div class="navigation">
+        <button id="prev" class="action-btn">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn action-btn-big">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+          <i class="fas fa-forward"></i>
+        </button>
+      </div>
+      
+      <div class="controls">
+        <button id="repeat" class="control-btn">
+          <i class="fas fa-redo"></i>
+        </button>
+        <button id="shuffle" class="control-btn">
+          <i class="fas fa-random"></i>
+        </button>
+        <div class="volume-container">
+          <i class="fas fa-volume-up" id="volume-icon"></i>
+          <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+        </div>
+      </div>
+    </div>
+    
+    <div class="playlist-container" id="playlist-container">
+      <h3>Playlist</h3>
+      <ul id="playlist" class="playlist">
+        <!-- Song list will be populated by JavaScript -->
+      </ul>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
